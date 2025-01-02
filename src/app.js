@@ -5,7 +5,7 @@
 
 require('./utils/config');
 const { join } = require('path');
-const { handleAndServeApp } = require('./utils/handlers');
+const handleAndServeApp = require('./utils/handlers');
 const { app, BrowserWindow, screen } = require('electron');
 
 
