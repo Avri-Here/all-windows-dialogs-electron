@@ -1,9 +1,25 @@
 
 
-const soundElement = document.getElementById('notificationSound');
+const soundElement = document.querySelector('.playAudio');
+
 soundElement.src = './sounds/notify.wav';
-soundElement.volume = 1.0;
-soundElement.play().catch(console.error);
+
+soundElement.play()
+    .then(() => { document.body.style.display = 'block'; })
+    .catch(console.error);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    
 // for %f in (*.wav) do ffmpeg -i "%f" -filter:a "volume=3.0" "boosted\%f"
