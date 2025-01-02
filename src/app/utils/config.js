@@ -15,7 +15,6 @@ if (isDevMode) process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
 
 
 
-process.env.BINARIES_DIR = join(homedir, 'Documents', 'myBackupFolder', 'binaries');
 const assetsDir = isDevMode ? join(__dirname, '../assets') : join(process.resourcesPath, 'assets');
 
 
