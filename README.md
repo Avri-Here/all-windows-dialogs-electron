@@ -26,4 +26,6 @@ Each dialog comes pre-styled with **authentic visuals**, **sounds**, and **layou
 
 ## Usage
 
-The library leverages **Electron's built-in dialog module** while applying legacy styling through **CSS** and **HTML templates** to give the dialogs their old-school look.
+The library leverages **Electron's built-in dialog module** while applying legacy styling through **CSS** and **HTML templates** to give the dialogs their old-school look .
+
+
