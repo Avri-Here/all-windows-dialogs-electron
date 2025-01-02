@@ -17,7 +17,7 @@ const showWindowsVistaDialog = (pageName = 'vista') => {
         const mainWindow = new BrowserWindow({
             roundedCorners: true, show: false,
             resizable: false, maximizable: false,
-            alwaysOnTop: true, width: 455, height: 230,
+            alwaysOnTop: true, width: 455, height: 215,
             frame: false, hasShadow: true, title: 'vistaDialog',
             icon: join(__dirname, `pages/${pageName}/icons/check.ico`),
             webPreferences: {

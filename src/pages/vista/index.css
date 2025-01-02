@@ -1,34 +1,17 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     width: 100%;
-    height: auto;
-    background: url('./dialog/info.png') no-repeat center;
-    background-size: cover;
-    background-position: top center;
+    height: 100vh;  
+    background:  url('./dialog/info.png') no-repeat center;
+    background-size: contain;
     user-select: none;
     overflow: hidden;
-    opacity: 0.1;
-    display: none;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
 }
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('./dialog/cover.jpg') no-repeat center;
-    background-size: cover;
-    background-position: top center;
-
-}
-
 
 .closeBtn {
-    
+
     top: 4px;
     width: 40px;
     right: 0;
