@@ -1,18 +1,34 @@
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('./dialog/info.png') no-repeat center center fixed;
+    width: 100%;
+    height: auto;
+    background: url('./dialog/info.png') no-repeat center;
     background-size: cover;
+    background-position: top center;
     user-select: none;
     overflow: hidden;
+    opacity: 0.1;
     display: none;
+
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./dialog/cover.jpg') no-repeat center;
+    background-size: cover;
+    background-position: top center;
+
 }
 
 
 .closeBtn {
+    
     top: 4px;
     width: 40px;
     right: 0;
@@ -20,7 +36,6 @@ body {
     height: 28px;
     cursor: pointer;
     position: absolute;
-    background-color: rgba(255, 0, 0, 0.2);
 }
 
 .titleBar {
@@ -36,5 +51,4 @@ body {
 }
 
 
-
-
+/* background-color: rgba(255, 0, 0, 0.2); */
