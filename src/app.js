@@ -12,7 +12,6 @@ const showWindowsVistaDialog = (pageName = 'vista') => {
 
             roundedCorners: true, show: false,
             resizable: false, maximizable: false,
-            // alwaysOnTop: false, width: 455, height: 245,
             alwaysOnTop: true, width: 455, height: 245,
             frame: false, hasShadow: true, title: 'vistaDialog',
             icon: join(__dirname, `pages/${pageName}/icons/check.ico`),
@@ -40,7 +39,7 @@ const showWindowsVistaDialog = (pageName = 'vista') => {
                 mainWindow.webContents.openDevTools({ mode: 'undocked' });
             }
             
-            await new Promise(resolve => setTimeout(resolve, 700));
+            // await new Promise(resolve => setTimeout(resolve, 700));
             mainWindow.show();
 
         });
