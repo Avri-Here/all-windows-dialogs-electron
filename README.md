@@ -1,6 +1,6 @@
-# Electron Dialogs Old Style
+# Electron Dialogs Old Style .
 
-## About the Library
+## About the Library .
 
 This library provides a set of **dialogs styled to emulate old-school Windows versions**, including :
 
