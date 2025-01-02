@@ -30,7 +30,7 @@ const showWindowsVistaDialog = (pageName = 'vista') => {
                 }
             });
 
-            handleAndServeApp();
+            handleAndServeApp(pageName);
             mainWindow.loadFile(join(__dirname, `pages/${pageName}/index.html`));
 
 
