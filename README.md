@@ -26,23 +26,4 @@ Each dialog comes pre-styled with **authentic visuals**, **sounds**, and **layou
 
 ## Usage
 
-The library leverages **Electron's built-in dialog module** while applying legacy styling through **CSS** and **HTML templates** to give the dialogs their old-school look .
-
-### Example
-
-Below is an example of how to display a **Vista-style User Account Control** dialog :
-
-```javascript
-
-const { dialog } = require('electron');
-
-dialog.showMessageBox({
-  type: 'question',
-  buttons: ['Yes', 'No'],
-  icon: 'path_to_icon.png',
-  title: 'User Account Control',
-  sound: 'path_to_sound_file.wav',
-  message: 'Do you want to allow this app to make changes to your device ?',
-});
-
-![alt text](readMe/dialog.png)
+The library leverages **Electron's built-in dialog module** while applying legacy styling through **CSS** and **HTML templates** to give the dialogs their old-school look.
