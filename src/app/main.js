@@ -16,10 +16,10 @@ const showWindowsVistaDialog = (pageName = 'winVista') => {
             alwaysOnTop: true, width: 455, height: 245,
             frame: false, hasShadow: true, title: 'vistaDialog',
             icon: join(__dirname, `pages/${pageName}/icons/check.ico`),
-            // webPreferences: {
-                // sandbox: false, nodeIntegration: true,
-                // preload: join(__dirname, `pages/${pageName}/preload.js`)
-            // }
+            webPreferences: {
+                sandbox: false, nodeIntegration: true,
+                preload: join(__dirname, `pages/${pageName}/preload.js`)
+            }
         });
 
         mainWindow.loadFile(join(__dirname, `pages/${pageName}/index.html`));
