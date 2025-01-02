@@ -29,3 +29,4 @@ Each dialog comes pre-styled with **authentic visuals**, **sounds**, and **layou
 The library leverages **Electron's built-in dialog module** while applying legacy styling through **CSS** and **HTML templates** to give the dialogs their old-school look .
 
 
+https://github.com/Avri-Here/all-windows-dialogs-electron/blob/main/src/app/pages/winVista/dialog/info.png
