@@ -2,5 +2,5 @@
 
 
 
-const { showWindowsVistaDialog } = require('../app/app.js');
+const { showWindowsVistaDialog } = require('../app.js');
 showWindowsVistaDialog();

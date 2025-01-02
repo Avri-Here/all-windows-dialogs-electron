@@ -3,7 +3,7 @@ require('./utils/config');
 const { join } = require('path');
 const { app, BrowserWindow, screen } = require('electron');
 
-const showWindowsVistaDialog = (pageName = 'winVista') => {
+const showWindowsVistaDialog = (pageName = 'vista') => {
 
 
     app.whenReady().then(() => {
@@ -78,11 +78,11 @@ module.exports = { showWindowsVistaDialog };
 //             roundedCorners: true,
 //             webPreferences: {
 //                 sandbox: false, nodeIntegration: true,
-//                 preload: join(__dirname, 'pages', 'winVista', 'preload.js')
+//                 preload: join(__dirname, 'pages', 'vista', 'preload.js')
 //             }
 //         });
 
-//         mainWindow.loadFile(join(__dirname, 'pages', 'winVista', 'index.html'));
+//         mainWindow.loadFile(join(__dirname, 'pages', 'vista', 'index.html'));
 
 //         mainWindow.on('ready-to-show', () => {
 
