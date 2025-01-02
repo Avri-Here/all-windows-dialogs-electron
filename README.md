@@ -4,9 +4,9 @@
 
 This library provides a set of **dialogs styled to emulate old-school Windows versions**, including :
 
+- **Windows 98**
 - **Windows XP**
 - **Windows Vista**
-- **Windows 98**
 
 The dialogs mimic the visual style, layout, and sound effects of legacy Windows dialog boxes :
 
