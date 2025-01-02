@@ -2,10 +2,15 @@
 
 const soundElement = document.querySelector('.playAudio');
 
+soundElement.src = null;
 soundElement.src = './sounds/notify.wav';
-
 soundElement.play().catch(console.error);
-document.body.style.display = 'block';
+
+setTimeout(() => {
+
+    document.body.style.display = 'block';
+    
+}, 950);
 
 
 

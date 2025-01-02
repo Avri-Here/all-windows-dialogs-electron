@@ -1,14 +1,14 @@
 
 
-const { ipcRenderer } = require('electron');
 
 document.addEventListener('DOMContentLoaded', () => {
-
+    
+    const { ipcRenderer } = require('electron');
     const closeBtn = document.querySelector('.closeBtn');
 
     closeBtn.addEventListener('click', async () => {
 
-        await ipcRenderer.invoke(`dialogWindowvista`, { action: 'close', title: 'vista' });
+        await ipcRenderer.invoke(`dialogWindowVista`, { action: 'close', title: 'winVista' });
         console.log('closeBtn clicked !');
     });
 

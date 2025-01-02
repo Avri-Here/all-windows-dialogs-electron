@@ -7,9 +7,11 @@ const { ipcMain } = require('electron');
 const { BrowserWindow } = require('electron');
 
 
-const handleAndServeApp = (winTitle = 'vista') => {
+const handleAndServeApp = (winTitle) => {
 
-    ipcMain.handle(`dialogWindow${winTitle}`, (_, { action, title }) => {
+    const withApperCase = winTitle.charAt(0).toUpperCase() + winTitle.slice(1);
+    
+    ipcMain.handle(`dialogWindow${withApperCase}`, (_, { action, title }) => {
 
         const dialogWindow = BrowserWindow.getAllWindows().find(win => win.getTitle() === title);
 

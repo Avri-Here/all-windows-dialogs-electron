@@ -271,7 +271,7 @@
     }
 
     const inBrowser = typeof window !== "undefined";
-    const isRtl = inBrowser && document.dir === "rtl";
+    // const isRtl = inBrowser && document.dir === "rtl";
     const hasTouch = inBrowser && "ontouchstart" in window;
     const hasPointerEvents = inBrowser && window.PointerEvent;
     const pointerDown$1 = hasPointerEvents ? "pointerdown" : hasTouch ? "touchstart" : "mousedown";
@@ -1597,7 +1597,7 @@
         isNumeric: isNumeric,
         isObject: isObject,
         isPlainObject: isPlainObject,
-        isRtl: isRtl,
+        // isRtl: isRtl,
         isSameSiteAnchor: isSameSiteAnchor,
         isString: isString,
         isTag: isTag,
