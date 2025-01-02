@@ -4,18 +4,23 @@
 
 
 const { ipcMain } = require('electron');
-const { BrowserWindow, screen } = require('electron');
+const { BrowserWindow } = require('electron');
 
 
-const handleAndServeApp = (mainWindow = new BrowserWindow()) => {
+// const handleAndServeApp = (mainWindow = new BrowserWindow()) => {
 
-    ipcMain.handle('dialogWindow', (_, action) => {
+const handleAndServeApp = () => {
 
-        const dialogWindow = BrowserWindow.getAllWindows().find(win => win.getTitle() === 'winVista');
+    ipcMain.handle('dialogWindow', (_, { action, title }) => {
+
+        console.log( { action, title });
+
+        const dialogWindow = BrowserWindow.getAllWindows().find(win => win.getTitle() === title);
 
         if (action === 'close') {
+
             dialogWindow.close();
-        }
+        };
 
 
     });

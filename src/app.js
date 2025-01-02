@@ -1,10 +1,16 @@
-require('./utils/config');
 
+
+
+
+
+require('./utils/config');
 const { join } = require('path');
+const { handleAndServeApp } = require('./utils/handlers');
 const { app, BrowserWindow, screen } = require('electron');
 
-const showWindowsVistaDialog = (pageName = 'vista') => {
 
+
+const showWindowsVistaDialog = (pageName = 'vista') => {
 
     app.whenReady().then(() => {
 
@@ -21,6 +27,7 @@ const showWindowsVistaDialog = (pageName = 'vista') => {
             }
         });
 
+        handleAndServeApp();
         mainWindow.loadFile(join(__dirname, `pages/${pageName}/index.html`));
 
         mainWindow.once('ready-to-show', async () => {
@@ -38,8 +45,7 @@ const showWindowsVistaDialog = (pageName = 'vista') => {
             if (process.env.IS_DEV_MODE) {
                 mainWindow.webContents.openDevTools({ mode: 'undocked' });
             }
-            
-            // await new Promise(resolve => setTimeout(resolve, 700));
+
             mainWindow.show();
 
         });
