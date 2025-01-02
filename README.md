@@ -42,5 +42,7 @@ dialog.showMessageBox({
   icon: 'path_to_icon.png',
   title: 'User Account Control',
   sound: 'path_to_sound_file.wav',
-  message: 'Do you want to allow this app to make changes to your device?',
+  message: 'Do you want to allow this app to make changes to your device ?',
 });
+
+![alt text](readMe/dialog.png)
