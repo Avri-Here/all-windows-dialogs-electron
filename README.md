@@ -14,13 +14,13 @@ The dialogs mimic the visual style, layout, and sound effects of legacy Windows 
 - **Error dialogs** (e.g., Windows Error messages)
 - **Warning dialogs**
 
-Each dialog comes pre-styled with **authentic visuals**, **sounds**, and **layout** that closely replicate the original Windows design.
+Each dialog comes pre-styled with **authentic visuals**, **sounds**, and **layout** that closely replicate the original Windows design .
 
 ## Features
 
 - **Authentic Appearance** : Dialogs that closely resemble the legacy Windows designs.
 
-- **Integrated Sounds** : Includes sound effects, like the Windows Vista ring sound, to enhance the user experience.
+- **Integrated Sounds** : Includes sound effects, like the Windows Vista ring sound, to enhance the user experience .
 
 - **Customizable Content** : Add custom details, icons, and images to personalize the dialogs further.
 
