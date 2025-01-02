@@ -1,7 +1,7 @@
 require('./utils/config');
 
 const { join } = require('path');
-const { app, BrowserWindow, ipcMain, screen } = require('electron');
+const { app, BrowserWindow, screen } = require('electron');
 
 const showWindowsVistaDialog = (pageName = 'winVista') => {
 
