@@ -106,7 +106,14 @@
 
 
 
+const soundElement = document.querySelector('.playAudio');
 
+soundElement.src = './wav/speech.wav';
+
+soundElement.play()
+
+    .then(() => { document.body.style.display = 'block'; })
+    .catch(console.error);
 
 
 UIkit.util.ready(function () {

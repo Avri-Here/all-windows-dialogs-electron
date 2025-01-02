@@ -12,27 +12,30 @@ const { app, BrowserWindow, screen } = require('electron');
 
 const showWindowsVistaDialog = (pageName = 'vista') => {
 
-    app.whenReady().then(() => {
+    const width = 455, height = 213;
 
-        const mainWindow = new BrowserWindow({
-            roundedCorners: true, show: false,
-            resizable: false, maximizable: false,
-            alwaysOnTop: true, width: 455, height: 213,
-            frame: false, hasShadow: true, title: 'vistaDialog',
-            icon: join(__dirname, `pages/${pageName}/icons/toDo.ico`),
-            webPreferences: {
-                sandbox: false, nodeIntegration: true,
-                preload: join(__dirname, `pages/${pageName}/preload.js`)
-            }
-        });
+    return new Promise((resolve, reject) => {
 
-        handleAndServeApp();
-        mainWindow.loadFile(join(__dirname, `pages/${pageName}/index.html`));
+        app.whenReady().then(() => {
 
-        mainWindow.once('ready-to-show', async () => {
+            const mainWindow = new BrowserWindow({
+                alwaysOnTop: true, width, height,
+                roundedCorners: true, show: false,
+                resizable: false, maximizable: false,
+                frame: false, hasShadow: true, title: 'vistaDialog',
+                icon: join(__dirname, `pages/${pageName}/icons/${pageName}.ico`),
+                webPreferences: {
+                    sandbox: false, nodeIntegration: true,
+                    preload: join(__dirname, `pages/${pageName}/preload.js`)
+                }
+            });
 
-            const { width, height } = mainWindow.getBounds();
-            const { width: screenWidth, height: screenHeight } = screen.getPrimaryDisplay().workAreaSize;
+            handleAndServeApp();
+            mainWindow.loadFile(join(__dirname, `pages/${pageName}/index.html`));
+
+
+            const workAreaSize = screen.getPrimaryDisplay().workAreaSize;
+            const screenWidth = workAreaSize.width, screenHeight = workAreaSize.height;
 
             mainWindow.setBounds({
                 width, height,
@@ -40,22 +43,24 @@ const showWindowsVistaDialog = (pageName = 'vista') => {
                 y: Math.round((screenHeight - height) / 2)
             });
 
+            mainWindow.once('ready-to-show', async () => {
 
-            if (process.env.IS_DEV_MODE) {
-                mainWindow.webContents.openDevTools({ mode: 'undocked' });
+                if (process.env.IS_DEV_MODE) {
+                    mainWindow.webContents.openDevTools({ mode: 'undocked' });
+                };
+
+                mainWindow.show();
+                resolve('vistaDialog');
+            });
+
+        }).catch(reject);
+
+        app.on('window-all-closed', () => {
+
+            if (process.platform !== 'darwin') {
+                app.quit();
             }
-
-            mainWindow.show();
-
         });
-
-    });
-
-    app.on('window-all-closed', () => {
-
-        if (process.platform !== 'darwin') {
-            app.quit();
-        }
     });
 };
 

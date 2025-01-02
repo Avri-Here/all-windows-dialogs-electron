@@ -4,7 +4,7 @@
     "description": "A collection of both classic and modern Windows-style dialogs for Electron app( XP, Vista, 7, 95, And more ..)",
     "main": "src/app.js",
     "scripts": {
-        "localRun": "electron src/local/localRun.js"
+        "localRun": "electron src/test/localRun.js"
     },
     "author": "Avraham Yom Tov",
     "license": "MIT",

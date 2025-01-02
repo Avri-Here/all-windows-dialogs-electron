@@ -20,6 +20,7 @@ body {
     background: url('../img/vista.jpg') no-repeat center center fixed;
     direction: rtl;
     user-select: none;
+    display: none;
 
 }
 
